@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JS Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div>
+<div class="form-group">
+    <input type="text" class="form-control" onchange="calculator1(this.value)" id="first" placeholder="Enter first number" value="">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" onchange="calculator2(this.value)" id="second" placeholder="Enter second number" value="">
+  </div>
+  <button type="button" class="btn btn-info" onclick="sum()">+</button>
+  <button type="button" class="btn btn-info" onclick="diff()">-</button>
+  <button type="button" class="btn btn-info" onclick="multiply()">*</button>
+  <button type="button" class="btn btn-info" onclick="division()">/</button>
+  <div id='result'></div>
+</div>
+</div>
+<script>
+    var num1=0; 
+    var num2=0; 
+function calculator1(val){
+  num1=val;
+}
+function calculator2(val){
+  num2=val;
+}
+
+
+function sum(){
+document.getElementById("result").innerHTML=(parseInt(num1)+parseInt(num2));
+}
+function diff(){
+document.getElementById("result").innerHTML=(parseInt(num1)-parseInt(num2));
+}
+function multiply(){
+document.getElementById("result").innerHTML=(parseInt(num1)*parseInt(num2));
+}
+function division(){
+document.getElementById("result").innerHTML=(parseInt(num1)/parseInt(num2));
+}
+
+</script>
+</body>
+</html>
